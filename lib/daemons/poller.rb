@@ -22,8 +22,6 @@ end
     queue.subscribe do |payload|
       obj = eval(payload)['message']
       puts obj
-      Rails.logger.auto_flushing = true
-      Rails.logger.info "This daemon is still running at #{Time.now}.\n"
       Publisher.create!(:message => obj)
       puts Publisher.all.count
       puts "***********************************"
