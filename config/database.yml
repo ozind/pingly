@@ -28,6 +28,6 @@ production:
     encoding: unicode
     database: pingly_prod
     pool: 5
-    username: postgres
-    password: password
+    username: brsfdqadzqitup
+    password: 0UxLcAjnWiWmtmJsjy2s_LXEKs
 
