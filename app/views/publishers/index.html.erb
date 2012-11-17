@@ -1,8 +1,8 @@
 <h2>Publishers Portal</h2>
 
-<%= link_to "publish a message", new_publisher_path %>
+<%= link_to "publish a new user", new_publisher_path %>
 
-<h3>Available Messages on Queue</h3>
-<% @messages.each do |m| %>
-    <ul><%= m.message %></ul>
+<h3>Users Published to the queue</h3>
+<% @users.each do |u| %>
+    <ul><%= u.first_name %>, <%= u.last_name %>, <%= u.email %></ul>
 <% end %>

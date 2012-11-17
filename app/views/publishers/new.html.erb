@@ -1,4 +1,13 @@
-<%= form_for @pub_msg do |f| %>
-    <%= f.text_area :message %>
+<h2>Create a user</h2>
+
+<%= form_for @user do |f| %>
+
+    <%= f.label :first_name %><br/>
+    <%= f.text_field :first_name %><br/>
+    <%= f.label :last_name %><br/>
+    <%= f.text_field :last_name %><br/>
+    <%= f.label :email %><br/>
+    <%= f.text_field :email %><br/>
+
     <%= f.submit "Submit" %>
 <% end %>
