@@ -6,3 +6,17 @@
 <% @users.each do |u| %>
     <ul><%= u.first_name %>, <%= u.last_name %>, <%= u.email %></ul>
 <% end %>
+
+<hr/>
+<h3>Push notification to the browser channels</h3>
+
+<p>When you click on this link, it will broadcast the 'hello world' message to all
+the browsers that are listening to this channel</p>
+
+<%= link_to_function "Publish to the channel", "send();" %>
+<script>
+   function send(){PUBNUB.publish({
+       channel : "hello_world",
+       message : "Hello world, I just published a message."
+   })}
+</script>
